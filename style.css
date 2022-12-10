@@ -1,50 +1,99 @@
 /*Box Sizing Reset for All Browsers*/
 *,
-*::before, *::after {
-    box-sizing: border-box;
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Poppins;
 }
 /*Non-Specific Styling*/
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  min-height: 100vh;
-  background-color: #FFFFFF;
+  width: 100vw;
+  background-color: #fdf7f0;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 60px;
+  font-family: Permanent Marker;
 }
+
+h2 {
+  color: #01435a;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.content h2 {
+    margin-top: -8px;
+    margin-bottom: 8px;
+}
+
+h4 {
+  color: #1ec28b;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+p {
+  color: #4d7b8b;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
 /*Top Nav Menu Styling*/
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #01435A;
-  background-size: cover;
+  background-color: #01435a;
   height: 96px;
+  width: 100%;
 }
+
 .left-nav {
-  padding-left: 100px;
+  padding-left: 5%;
+  width: 50%;
 }
-a {
+.right-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+  width: 50%;
+}
+
+.nav-menu {
+  margin: 24px;
+}
+.contact-button,
+.book-button {
+  box-sizing: border-box;
+  height: 40px;
+  width: 120px;
+  border-radius: 12px;
   color: white;
-  padding: 20px;
-  text-decoration: none;
+  margin: 8px;
 }
-#contact-button {
- height: 40px;
- width: auto;
- border-radius: 12px;
- background-color: #01435A;
- color: white;
- border: solid 1px #1EC28B;
+
+button:hover {
+  cursor: pointer;
 }
-#book-button {
- height: 40px;
- width: auto;
- border-radius: 12px;
- background-color: #1EC28B;
- color: white;
+
+.contact-button {
+  background-color: #01435a;
+  border: solid 2px #1ec28b;
+  margin-left: 24px;
+}
+.book-button {
+  background-color: #1ec28b;
+  border: none;
 }
 /*Hero img/Banner*/
 .hero-img {
@@ -53,53 +102,257 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hero-text {
   text-align: center;
-  position: absolute;
-  left: 35%;
-  top: 17%;
+  position: relative;
+  align-items: center;
   color: white;
 }
 .hero-button {
-  width: 200px;
+  width: 212px;
   height: 56px;
-  background-color: #1EC28B;
+  background-color: #1ec28b;
   border-radius: 12px;
   color: white;
+  font-size: 20px;
+  border: none;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
+
 /*Awards Styling*/
-.awards-container {
+.content {
+  display: flex;
+  box-sizing: border-box;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.left-content,
+.right-content,
+.awards-content,
+.featured-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.left-content,
+.right-content {
+  align-items: flex-start;
+}
+
+.left-content button {
+  color: #1ec28b;
+  border: solid 2px #1ec28b;
+  width: 156px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: inherit;
+}
+
+.awards-content {
+  flex-direction: row;
+}
+
+.awards-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.awards-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.award-img-1,
+.award-img-2,
+.award-img-3 {
+  object-fit: contain;
+}
+
+.award-img-1 {
+  width: 240px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.award-img-2 {
+  width: 240px;
+}
+
+.award-img-3 {
+  width: 220px;
+}
+
+.popular-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.cards-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 373px;
   display: block;
+  overflow: hidden;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #ffffff;
+  margin: 12px;
 }
-p {
-  height: 224px;
-  width: 580px;
+
+.card-img {
+  width: 100%;
+  height: 240px;
 }
-footer {
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.card-container {
+  padding: 2px 16px;
+}
+
+.booking {
+  width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #FDDBCB;
-  background-size: cover;
+  align-items: center;
+  background-color: #01435a;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
   height: 200px;
 }
 
+.left-booking {
+  width: 60%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100px;
+  margin: 0px;
+}
 
+.right-booking {
+  width: 30%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100px;
+  margin: 0px;
+}
 
+.left-booking h2 {
+  color: white;
+  font-family: Permanent Marker;
+  font-size: 80px;
+  margin: 0px;
+}
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fddbcb;
+  height: 200px;
+  margin-top: 40px;
+}
+
+.social-logos-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-logo {
+  display: block;
+  width: 32px;
+  margin: 4px;
+  object-fit: contain;
+  cursor: pointer;
+}
 
 /*Media Queiries Starting w/ Mobile and Up-Scaling*/
-/*For Desktop View*/
-@media (min-width: 768px) {
-  
-} 
+
 /*Very small devices - Phones <= 600px*/
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 /*Small devices - portrait (Vertical) tablets >= 600px*/
-@media only screen and (min-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 /*Medium devices - landscape (Horizontal) tablets >= 768px*/
-@media only screen and (min-width: 768px) {}
-/*Large devices - Desktop/Laptop >= 992px*/
-@media only screen and (min-width: 992px) {}
-/*Extra Large devices - Large Desktop/Laptops >= 12px*/
-@media only screen and (min-width: 1200px) {}
+@media only screen and (max-width: 768px) {
+  h1,
+  .left-booking h2 {
+    font-size: 56px;
+  }
+}
+/*Large devices - Desktop/Laptop <= 992px*/
+@media only screen and (max-width: 992px) {
+  .left-content,
+  .right-content,
+  .awards-content,
+  .featured-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .featured-content {
+    order: 1;
+  }
+
+  p,
+  h2 {
+    text-align: center;
+  }
+
+  .card p {
+    text-align: left;
+  }
+
+}
+/*Extra Large devices - Large Desktop/Laptops <= 1200px*/
+@media only screen and (max-width: 1200px) {
+  .left-booking,
+  .right-booking {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .booking {
+    height: 303px;
+    flex-direction: column;
+  }
+}
