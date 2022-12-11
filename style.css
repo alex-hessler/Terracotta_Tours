@@ -56,7 +56,6 @@ nav {
   height: 96px;
   width: 100%;
 }
-
 .left-nav {
   padding-left: 5%;
   width: 50%;
@@ -68,7 +67,6 @@ nav {
   padding-right: 5%;
   width: 50%;
 }
-
 .nav-menu {
   margin: 24px;
 }
@@ -81,11 +79,9 @@ nav {
   color: white;
   margin: 8px;
 }
-
 button:hover {
   cursor: pointer;
 }
-
 .contact-button {
   background-color: #01435a;
   border: solid 2px #1ec28b;
@@ -95,6 +91,55 @@ button:hover {
   background-color: #1ec28b;
   border: none;
 }
+
+
+
+
+/*Hamburger Menu*/
+rect {
+  stroke: #1ec28b;
+  fill: #1ec28b;
+}
+.hamburger, .hamburger-button {
+  font-size: 20px;
+  border: none;
+  background-color: #01435a
+}
+/*!!!Can not get hamburger menu to display as button!!!*/
+.hamburger-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  top: 20px;
+  right: 20px;
+  box-shadow: 0px 8px 16px 0px;
+  background: #FFFFFF;
+}
+.hamburger-content a {
+  float: none;
+  color: #000000;
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.hamburger:hover {
+  background-color: #1ec28b;
+  opacity: 80%;
+  color: black;
+}
+.hamburger-content a:hover {
+  background: linear-gradient(#1ec28b, #01435a);
+  color: #FFFFFF;
+  background-color: black;
+}
+.hamburger:hover .hamburger-content {
+  display: block;
+}
+
+
+
+
 /*Hero img/Banner*/
 .hero-img {
   background-image: url("/assets/Rectangle.png");
@@ -132,7 +177,6 @@ button:hover {
   flex-wrap: wrap;
   margin: auto;
 }
-
 .left-content,
 .right-content,
 .awards-content,
@@ -141,14 +185,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px;
+  padding: 10px;
 }
-
 .left-content,
 .right-content {
-  align-items: flex-start;
+  align-items: flex-center;
 }
-
 .left-content button {
   color: #1ec28b;
   border: solid 2px #1ec28b;
@@ -157,11 +199,9 @@ button:hover {
   border-radius: 12px;
   background-color: inherit;
 }
-
 .awards-content {
   flex-direction: row;
 }
-
 .awards-left {
   width: 50%;
   display: flex;
@@ -169,7 +209,6 @@ button:hover {
   align-items: flex-end;
   justify-content: center;
 }
-
 .awards-right {
   width: 50%;
   display: flex;
@@ -177,27 +216,24 @@ button:hover {
   align-items: flex-start;
   justify-content: center;
 }
-
 .award-img-1,
 .award-img-2,
 .award-img-3 {
   object-fit: contain;
 }
-
 .award-img-1 {
   width: 240px;
   margin-right: 20px;
   margin-top: 20px;
 }
-
 .award-img-2 {
   width: 240px;
 }
-
 .award-img-3 {
   width: 220px;
 }
 
+/*Most Popular & Card Styling*/
 .popular-content {
   width: 100%;
   display: flex;
@@ -207,7 +243,6 @@ button:hover {
   margin-top: 64px;
   margin-bottom: 64px;
 }
-
 .cards-content {
   width: 100%;
   display: flex;
@@ -215,7 +250,6 @@ button:hover {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .card {
   width: 373px;
   display: block;
@@ -226,22 +260,20 @@ button:hover {
   background-color: #ffffff;
   margin: 12px;
 }
-
 .card-img {
   width: 100%;
   height: 240px;
 }
-
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
-
 /* Add some padding inside the card container */
 .card-container {
   padding: 2px 16px;
 }
 
+/*Booking Styling*/
 .booking {
   width: 100%;
   display: flex;
@@ -253,7 +285,6 @@ button:hover {
   flex-wrap: wrap;
   height: 200px;
 }
-
 .left-booking {
   width: 60%;
   display: flex;
@@ -262,7 +293,6 @@ button:hover {
   height: 100px;
   margin: 0px;
 }
-
 .right-booking {
   width: 30%;
   display: flex;
@@ -271,7 +301,6 @@ button:hover {
   height: 100px;
   margin: 0px;
 }
-
 .left-booking h2 {
   color: white;
   font-family: Permanent Marker;
@@ -279,6 +308,7 @@ button:hover {
   margin: 0px;
 }
 
+/*Footer Styling*/
 footer {
   display: flex;
   flex-direction: column;
@@ -288,12 +318,10 @@ footer {
   height: 200px;
   margin-top: 40px;
 }
-
 .social-logos-cont {
   display: flex;
   flex-direction: row;
 }
-
 .social-logo {
   display: block;
   width: 32px;
@@ -303,12 +331,28 @@ footer {
 }
 
 /*Media Queiries Starting w/ Mobile and Up-Scaling*/
-
+/*Hamburger Menu/Nav Menu media queries*/
+@media only screen and (min-width: 800px) {
+  .hamburger {
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+    margin-right: 0%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .right-nav {
+    visibility: hidden;
+  }
+}
 /*Very small devices - Phones <= 600px*/
 @media only screen and (max-width: 600px) {
 }
 /*Small devices - portrait (Vertical) tablets >= 600px*/
 @media only screen and (max-width: 600px) {
+  .featured-content {
+    height: 20px;
+  }
 }
 /*Medium devices - landscape (Horizontal) tablets >= 768px*/
 @media only screen and (max-width: 768px) {
