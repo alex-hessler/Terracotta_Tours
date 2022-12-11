@@ -103,11 +103,11 @@ rect {
 .hamburger, .hamburger-button {
   font-size: 20px;
   border: none;
-  background-color: #01435a
+  background-color: #01435a;
 }
 /*!!!Can not get hamburger menu to display as button!!!*/
 .hamburger-content {
-  display: none;
+  display: block;
   position: absolute;
   min-width: 160px;
   top: 20px;
@@ -350,10 +350,9 @@ footer {
 }
 /*Small devices - portrait (Vertical) tablets >= 600px*/
 @media only screen and (max-width: 600px) {
-  .featured-content {
-    height: 20px;
+ 
   }
-}
+
 /*Medium devices - landscape (Horizontal) tablets >= 768px*/
 @media only screen and (max-width: 768px) {
   h1,
