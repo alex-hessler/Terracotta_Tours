@@ -57,18 +57,18 @@ nav {
   width: 100%;
 }
 .left-nav {
-  padding-left: 5%;
-  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 .right-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 5%;
-  width: 50%;
+  width: 100%;
 }
 .nav-menu {
-  margin: 24px;
+  margin: 10px;
 }
 .contact-button,
 .book-button {
@@ -96,28 +96,32 @@ button:hover {
 
 
 /*Hamburger Menu*/
+/*Attention Below*/
 rect {
   stroke: #1ec28b;
   fill: #1ec28b;
 }
+
 .hamburger, .hamburger-button {
-  font-size: 20px;
+  font-size: 17px;
   border: none;
+  color: #000000;
+  outline: none;
   background-color: #01435a;
 }
-/*!!!Can not get hamburger menu to display as button!!!*/
 .hamburger-content {
-  display: block;
+  display: none;
   position: absolute;
   min-width: 160px;
-  top: 20px;
-  right: 20px;
+  top: 50px;
+  right: 2px;
   box-shadow: 0px 8px 16px 0px;
-  background: #FFFFFF;
 }
+
 .hamburger-content a {
   float: none;
   color: #000000;
+  background-color: #FFFFFF;
   display: block;
   text-align: center;
   padding: 10px 10px;
@@ -125,17 +129,25 @@ rect {
 }
 .hamburger:hover {
   background-color: #1ec28b;
-  opacity: 80%;
-  color: black;
+  opacity: 75%;
 }
 .hamburger-content a:hover {
   background: linear-gradient(#1ec28b, #01435a);
   color: #FFFFFF;
-  background-color: black;
 }
 .hamburger:hover .hamburger-content {
   display: block;
 }
+
+.hamburger a:hover, .hamburger-button:hover .hamburger-button {
+  background-color:white;
+  opacity: 90%;
+  color: black;
+}
+
+
+
+
 
 
 
@@ -187,6 +199,8 @@ rect {
   justify-content: center;
   padding: 10px;
 }
+
+.featured-content,
 .left-content,
 .right-content {
   align-items: flex-center;
@@ -197,7 +211,7 @@ rect {
   width: 156px;
   height: 48px;
   border-radius: 12px;
-  background-color: inherit;
+  background-color: white;
 }
 .awards-content {
   flex-direction: row;
@@ -334,24 +348,23 @@ footer {
 /*Hamburger Menu/Nav Menu media queries*/
 @media only screen and (min-width: 800px) {
   .hamburger {
+    visibility: hidden;
     height: 0px;
     width: 0px;
-    visibility: hidden;
-    margin-right: 0%;
+    margin-right: 10%;
   }
 }
 @media only screen and (max-width: 800px) {
-  .right-nav {
+  .right-nav, .hamburger-menu{
     visibility: hidden;
   }
 }
+
 /*Very small devices - Phones <= 600px*/
 @media only screen and (max-width: 600px) {
 }
 /*Small devices - portrait (Vertical) tablets >= 600px*/
-@media only screen and (max-width: 600px) {
- 
-  }
+@media only screen and (max-width: 600px) {}
 
 /*Medium devices - landscape (Horizontal) tablets >= 768px*/
 @media only screen and (max-width: 768px) {
@@ -383,7 +396,6 @@ footer {
   .card p {
     text-align: left;
   }
-
 }
 /*Extra Large devices - Large Desktop/Laptops <= 1200px*/
 @media only screen and (max-width: 1200px) {
