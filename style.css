@@ -11,9 +11,11 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  height: 100vh;
   background-color: #fdf7f0;
   overflow-x: hidden;
 }
+
 h1 {
   font-size: 60px;
   font-family: Permanent Marker;
@@ -54,11 +56,10 @@ nav {
   align-items: center;
   background-color: #01435a;
   height: 96px;
-  width: 100%;
 }
 .left-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   width: 100%;
 }
 .right-nav {
@@ -68,7 +69,7 @@ nav {
   width: 100%;
 }
 .nav-menu {
-  margin: 10px;
+  margin: 5px;
 }
 .contact-button,
 .book-button {
@@ -77,26 +78,22 @@ nav {
   width: 120px;
   border-radius: 12px;
   color: white;
-  margin: 8px;
+  margin: 4px;
 }
 button:hover {
   cursor: pointer;
+  box-shadow: 0px 3px 5px 0px #000000;
 }
 .contact-button {
   background-color: #01435a;
   border: solid 2px #1ec28b;
-  margin-left: 24px;
+  margin-left: 20px;
 }
 .book-button {
   background-color: #1ec28b;
   border: none;
 }
-
-
-
-
 /*Hamburger Menu*/
-/*Attention Below*/
 rect {
   stroke: #1ec28b;
   fill: #1ec28b;
@@ -114,7 +111,7 @@ rect {
   position: absolute;
   min-width: 160px;
   top: 50px;
-  right: 2px;
+  right: 25px;
   box-shadow: 0px 8px 16px 0px;
 }
 
@@ -140,18 +137,8 @@ rect {
 }
 
 .hamburger a:hover, .hamburger-button:hover .hamburger-button {
-  background-color:white;
   opacity: 90%;
-  color: black;
 }
-
-
-
-
-
-
-
-
 /*Hero img/Banner*/
 .hero-img {
   background-image: url("/assets/Rectangle.png");
@@ -246,7 +233,6 @@ rect {
 .award-img-3 {
   width: 220px;
 }
-
 /*Most Popular & Card Styling*/
 .popular-content {
   width: 100%;
@@ -361,8 +347,7 @@ footer {
 }
 
 /*Very small devices - Phones <= 600px*/
-@media only screen and (max-width: 600px) {
-}
+@media only screen and (max-width: 600px) {}
 /*Small devices - portrait (Vertical) tablets >= 600px*/
 @media only screen and (max-width: 600px) {}
 
