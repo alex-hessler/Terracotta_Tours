@@ -28,8 +28,8 @@ h2 {
 }
 
 .content h2 {
-    margin-top: -8px;
-    margin-bottom: 8px;
+  margin-top: -8px;
+  margin-bottom: 8px;
 }
 
 h4 {
@@ -56,21 +56,28 @@ nav {
   align-items: center;
   background-color: #01435a;
   height: 96px;
-}
-.left-nav {
-  display: flex;
-  justify-content: space-evenly;
   width: 100%;
 }
+
+.left-nav {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  padding-left: 3%;
+}
+
 .right-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
+  width: 20%;
+  padding-right: 3%;
 }
+
 .nav-menu {
   margin: 5px;
 }
+
 .contact-button,
 .book-button {
   box-sizing: border-box;
@@ -80,32 +87,39 @@ nav {
   color: white;
   margin: 4px;
 }
+
 button:hover {
   cursor: pointer;
   box-shadow: 0px 3px 5px 0px #000000;
 }
+
 .contact-button {
   background-color: #01435a;
   border: solid 2px #1ec28b;
   margin-left: 20px;
 }
+
 .book-button {
   background-color: #1ec28b;
   border: none;
 }
+
 /*Hamburger Menu*/
+
 rect {
   stroke: #1ec28b;
   fill: #1ec28b;
 }
 
-.hamburger, .hamburger-button {
+.hamburger,
+.hamburger-button {
   font-size: 17px;
   border: none;
   color: #000000;
   outline: none;
   background-color: #01435a;
 }
+
 .hamburger-content {
   display: none;
   position: absolute;
@@ -118,27 +132,32 @@ rect {
 .hamburger-content a {
   float: none;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   display: block;
   text-align: center;
   padding: 10px 10px;
   text-decoration: none;
 }
+
 .hamburger:hover {
   background-color: #1ec28b;
   opacity: 75%;
 }
+
 .hamburger-content a:hover {
   background: linear-gradient(#1ec28b, #01435a);
-  color: #FFFFFF;
+  color: #ffffff;
 }
+
 .hamburger:hover .hamburger-content {
   display: block;
 }
 
-.hamburger a:hover, .hamburger-button:hover .hamburger-button {
+.hamburger a:hover,
+.hamburger-button:hover .hamburger-button {
   opacity: 90%;
 }
+
 /*Hero img/Banner*/
 .hero-img {
   background-image: url("/assets/Rectangle.png");
@@ -150,12 +169,14 @@ rect {
   justify-content: center;
   align-items: center;
 }
+
 .hero-text {
   text-align: center;
   position: relative;
   align-items: center;
   color: white;
 }
+
 .hero-button {
   width: 212px;
   height: 56px;
@@ -176,6 +197,7 @@ rect {
   flex-wrap: wrap;
   margin: auto;
 }
+
 .left-content,
 .right-content,
 .awards-content,
@@ -184,7 +206,7 @@ rect {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 20px;
 }
 
 .featured-content,
@@ -192,6 +214,7 @@ rect {
 .right-content {
   align-items: flex-center;
 }
+
 .left-content button {
   color: #1ec28b;
   border: solid 2px #1ec28b;
@@ -200,9 +223,11 @@ rect {
   border-radius: 12px;
   background-color: white;
 }
+
 .awards-content {
   flex-direction: row;
 }
+
 .awards-left {
   width: 50%;
   display: flex;
@@ -210,6 +235,7 @@ rect {
   align-items: flex-end;
   justify-content: center;
 }
+
 .awards-right {
   width: 50%;
   display: flex;
@@ -217,22 +243,27 @@ rect {
   align-items: flex-start;
   justify-content: center;
 }
+
 .award-img-1,
 .award-img-2,
 .award-img-3 {
   object-fit: contain;
 }
+
 .award-img-1 {
   width: 240px;
   margin-right: 20px;
   margin-top: 20px;
 }
+
 .award-img-2 {
   width: 240px;
 }
+
 .award-img-3 {
   width: 220px;
 }
+
 /*Most Popular & Card Styling*/
 .popular-content {
   width: 100%;
@@ -243,6 +274,7 @@ rect {
   margin-top: 64px;
   margin-bottom: 64px;
 }
+
 .cards-content {
   width: 100%;
   display: flex;
@@ -250,6 +282,7 @@ rect {
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
 .card {
   width: 373px;
   display: block;
@@ -260,10 +293,12 @@ rect {
   background-color: #ffffff;
   margin: 12px;
 }
+
 .card-img {
   width: 100%;
   height: 240px;
 }
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
@@ -285,6 +320,7 @@ rect {
   flex-wrap: wrap;
   height: 200px;
 }
+
 .left-booking {
   width: 60%;
   display: flex;
@@ -293,6 +329,7 @@ rect {
   height: 100px;
   margin: 0px;
 }
+
 .right-booking {
   width: 30%;
   display: flex;
@@ -301,6 +338,7 @@ rect {
   height: 100px;
   margin: 0px;
 }
+
 .left-booking h2 {
   color: white;
   font-family: Permanent Marker;
@@ -318,10 +356,12 @@ footer {
   height: 200px;
   margin-top: 40px;
 }
+
 .social-logos-cont {
   display: flex;
   flex-direction: row;
 }
+
 .social-logo {
   display: block;
   width: 32px;
@@ -335,21 +375,25 @@ footer {
 @media only screen and (min-width: 800px) {
   .hamburger {
     visibility: hidden;
+    display: none;
     height: 0px;
     width: 0px;
     margin-right: 10%;
   }
 }
 @media only screen and (max-width: 800px) {
-  .right-nav, .hamburger-menu{
+  .right-nav,
+  .hamburger-menu {
     visibility: hidden;
   }
 }
 
 /*Very small devices - Phones <= 600px*/
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 /*Small devices - portrait (Vertical) tablets >= 600px*/
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 600px) {
+}
 
 /*Medium devices - landscape (Horizontal) tablets >= 768px*/
 @media only screen and (max-width: 768px) {
@@ -371,6 +415,10 @@ footer {
 
   .featured-content {
     order: 1;
+  }
+
+  #featured-aventure {
+    width: 100%;
   }
 
   p,
