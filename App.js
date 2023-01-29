@@ -7,15 +7,11 @@ const body = document.querySelector('body');
 btn.addEventListener('touchstart', () => {
   if(!content.classList.contains('active')){
     content.classList.add('active');
+    btn.classList.add('btn-shadow');
   } else {
     content.classList.remove('active');
+    btn.classList.remove('btn-shadow');
   }
-  
 });
 
-body.addEventListener('onscroll', function(evnt) {
-    if(content.style.display != 'none'){
-        content.style.display = 'none';
-        content.classList.remove('active');
-      } 
-});
+

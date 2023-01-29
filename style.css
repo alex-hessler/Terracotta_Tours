@@ -89,11 +89,6 @@ nav {
   margin: 4px;
 }
 
-button:hover {
-  cursor: pointer;
-  box-shadow: 0px 3px 5px 0px #000000;
-}
-
 .contact-button {
   background-color: #01435a;
   border: solid 2px #1ec28b;
@@ -160,10 +155,18 @@ rect {
   .hamburger-button:hover .hamburger-button {
     opacity: 90%;
   }
+  button:hover {
+    cursor: pointer;
+    box-shadow: 0px 3px 5px 0px #000000;
+  }
 }
 
 .active {
   display: block;
+}
+
+.btn-shadow {
+  box-shadow: 0px 3px 5px 0px #000000;
 }
 
 
